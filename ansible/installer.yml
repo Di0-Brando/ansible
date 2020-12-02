@@ -1,2 +1,2 @@
-- hosts: group1
+- hosts: hosta
   roles: server_hostname
