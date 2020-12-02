@@ -1,0 +1,17 @@
+- name: Create a file
+  file:
+    path: "{{HOME}}"
+    state: touch
+    mode: '0755'
+
+- name: Get hostname
+  shell: echo $HOSTNAME
+  register: result
+
+- debug:
+    var: result
+
+- name: Set hostname to file
+  lineinfile:
+    dest: "{{HOME}}"
+    line: "Hostname = {{ result.stdout }}"

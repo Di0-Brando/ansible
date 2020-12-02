@@ -1,0 +1,8 @@
+- name: Run group1
+  hosts: group1
+  roles: server_hostname
+
+- name: Run group2
+  hosts: group2
+  roles: server_hostname
+
