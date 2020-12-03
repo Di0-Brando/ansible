@@ -1,3 +1,5 @@
-- hosts: group2
-  connection: local
+---
+- hosts:
+    - group2
+    - group1
   roles: server_hostname
